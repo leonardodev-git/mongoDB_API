@@ -42,7 +42,7 @@ export class TasksController {
 
   @UseGuards(JwtAuthGuard)
   @Delete(':id')
-  async delete(@Param('id') id: string) {
+  async delete(@Param('id') id: string): Promise<any> {
     return this.taskService.delete(id);
   }
 }

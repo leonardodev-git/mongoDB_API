@@ -29,7 +29,7 @@ export class UserService {
     return this.getById(id);
   }
 
-  async delete(id: string) {
+  async delete(id: string): Promise<any> {
     return await this.userModel.deleteOne({ _id: id }).exec();
   }
 }

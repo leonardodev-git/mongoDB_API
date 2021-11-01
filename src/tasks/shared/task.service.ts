@@ -25,7 +25,7 @@ export class TaskService {
     return this.getById(id);
   }
 
-  async delete(id: string) {
+  async delete(id: string): Promise<any> {
     return await this.taskModel.deleteOne({ _id: id }).exec();
   }
 }

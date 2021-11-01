@@ -35,7 +35,7 @@ import {
     }
   
     @Delete(':id')
-    async delete(@Param('id') id: string) {
+    async delete(@Param('id') id: string): Promise<any> {
       return this.userService.delete(id);
     }
   }
